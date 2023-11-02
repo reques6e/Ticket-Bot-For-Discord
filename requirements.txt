@@ -1,0 +1,3 @@
+discord==2.2.3
+datetime==5.1
+chat_exporter
