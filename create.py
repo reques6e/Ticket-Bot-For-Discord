@@ -73,7 +73,7 @@ class embedButtons(discord.ui.View):
             try:
                 await interaction.response.send_message(embed=embed5, ephemeral=True)
             except discord.HTTPException:
-                await interaction.response.send_message(f'''**You can't use that command!****''')
+                await interaction.response.send_message(f'''**Вы не можете использовать эту команду!****''')
 
 
     @discord.ui.button(label="Опции", emoji="⚙️", style=discord.ButtonStyle.green)
@@ -163,13 +163,13 @@ class embedButtons(discord.ui.View):
                     except discord.HTTPException:
                         await interaction.response.send_message(f'''**You can only use this command in a ticket channel!****''')
             else:
-                embed5 = discord.Embed(description=f'''You can't use that command!''', color=embedColor)
+                embed5 = discord.Embed(description=f'''Вы не можете использовать эту команду!''', color=embedColor)
                 embed5.set_author(name=f'{author}', icon_url=f'{author.display_avatar}')
                 embed5.set_footer(text=f"{footerOfEmbeds} | {bot.user.id}", icon_url=f'{bot.user.display_avatar}')  
                 try:
                     await interaction.response.send_message(embed=embed5, ephemeral=True)
                 except discord.HTTPException:
-                    await interaction.response.send_message(f'''**You can't use that command!****''')
+                    await interaction.response.send_message(f'''**Вы не можете использовать эту команду!****''')
         except Exception as e:
             message2 = await interaction.response.send_message(f'A unknown error has occurred, a copy of the error has been sent to the developer ❌', ephemeral=True)
             activity1 = discord.Activity(type=discord.ActivityType.playing, name=f'{botStatusMessage}')
@@ -204,7 +204,7 @@ class TicketCreationModal(discord.ui.Modal, title=f"Create a ticket"):
             prole = get(guild.roles, id=channelPerms[f"{ticketType}"])
             default_perms[prole] = discord.PermissionOverwrite(read_messages=True, send_messages=True)  
         now = datetime.now().strftime("%m-%d-%Y, %H:%M:%S")
-        category = discord.utils.get(guild.categories, id=1132573948387799060) # ЗАМЕНИТЬ
+        category = discord.utils.get(guild.categories, id=CATEGORY_CREATE) # ЗАМЕНИТЬ
         tchannel = await guild.create_text_channel(name=f'{ticketType}-{author}', category=category, overwrites=default_perms, topic=f"Причина: {ticketDescription} | Создал: {author}")
         embed3 = discord.Embed(description=f'Тикет **{ticketType}** создан, {tchannel.mention}. Сотрудники ответят вам в ближайшее время!', color=embedColor)
         embed3.set_author(name=f'{author}', icon_url=f'{author.display_avatar}')

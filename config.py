@@ -8,17 +8,16 @@ import json
 #Main Config:#
 botStatusType = 'idle'                                                   #Bot Status Type (Ex. Playing, Watching, Listening, or Streaming)
 botStatusMessage = 'Tickets'                                                #The message that is shown on the bots activity
-guildID = 1086731304214732920                                           #ID of the Guild the the bot is running in
-ticketLogsChannelID = 1132578415292186654                                 #ID of the Channel to send system logs to
-ticketTranscriptChannelID = 1132578415292186654                      #ID of the Channel to send ticket transcripts to
+guildID = 1168567644467777568                                           #ID of the Guild the the bot is running in
+ticketLogsChannelID = 1168632408325750794                                 #ID of the Channel to send system logs to
+ticketTranscriptChannelID = 1168632408325750794                      #ID of the Channel to send ticket transcripts to
 databaseName = 'tickets.db'                                          #Leave set to default value unless if you want to use a different database name
 debugLogSendID = 1049016557935796275                                     #ID of the Bot Owner to send debug information to
 
 #Ticket Creation/Options Config:#
-IDOfChannelToSendTicketCreationEmbed = 1132574046601617408               #ID of the Channel to send the Create a ticket embed to
-IDofMessageForTicketCreation = 1127264816059383868                       #This variable was automatically adjusted.activeTicketsCategoryID = 1127264220845707334                      #ID of the active tickets category
-onHoldTicketsCategoryID = 1132573948387799060                             #ID of the onhold tickets category
-archivedTicketsCategoryID = 1132573948387799060                    #ID of the archived tickets category
+IDOfChannelToSendTicketCreationEmbed = 1168632271318814731               #ID of the Channel to send the Create a ticket embed to
+IDofMessageForTicketCreation = 1178375201684213861                       #This variable was automatically adjusted.archivedTicketsCategoryID = 1168632408325750794                    #ID of the archived tickets category
+CATEGORY_CREATE = 1168632237378514964
 
 OptionsDict = {
     "Option 1": ("Предложение", "sales", "Создайте тикет с предложением об улучшении."),                                      #This is the ticket options dictionary. It defines the different types of tickets that users can create.
@@ -29,9 +28,9 @@ OptionsDict = {
                                                                                                                  
 
 channelPerms = {                                                                                          #This is the ticket channel perms dictionary.
-    "sales": (1130201892979490947),                                                                     #This dictionary defines what roles will have access to each type of Ticket Channel
-    "support": (1130201892979490947),                                           #Each type can support multiple role IDS
-    "staff": (1130203349891940413)                                              #Each entry into the definition should look something like this:
+    "sales": (1172195012855988334),                                                                     #This dictionary defines what roles will have access to each type of Ticket Channel
+    "support": (1168575874719809566),                                           #Each type can support multiple role IDS
+    "staff": (1168632030662242325)                                              #Each entry into the definition should look something like this:
 }                                                                                                         #"Type of Option":(ROLEID1, ROLEID2)
                                                                                                           #Add a comma after every option definition except for the last one. 
                                                                                                           #If you only have one option then no comma is needed.
